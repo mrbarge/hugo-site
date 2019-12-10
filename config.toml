@@ -5,7 +5,7 @@ theme = "mainroad"
 
 [Author] # Used in authorbox
   name = "Matt Bargenquast"
-  bio = "The one in Australia."
+  bio = "I'm the one in Australia."
   avatar = "img/avatar.png"
   
 [Params]
@@ -20,6 +20,7 @@ theme = "mainroad"
   post_meta = ["date", "categories", "translations"] # Order of post meta information
   mainSections = ["post", "blog", "news"] # Specify section pages to show on home page and the "Recent articles" widget
   highlightColor = "#e22d30" # Override highlight color
+  postSections = ["post", "posts"]
 
 [Params.sidebar]
   home = "right" # Configure layout for home page
