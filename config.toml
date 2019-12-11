@@ -1,4 +1,4 @@
-baseURL = "/blog"
+baseURL = "/"
 languageCode = "en-us"
 title = "Matt Bargenquast"
 theme = "mainroad"
@@ -13,7 +13,7 @@ theme = "mainroad"
   description = "Musings from Matt" # Site description. Used in meta description
   copyright = "Matt Bargenquast" # Footer copyright holder, otherwise will use site title
   twitter_cards = true # Enable Twitter Cards if true
-  readmore = false # Show "Read more" button in list if true
+  readmore = true # Show "Read more" button in list if true
   authorbox = true # Show authorbox at bottom of pages if true
   toc = true # Enable Table of Contents
   post_navigation = true # Show post navigation at bottom of pages if true
