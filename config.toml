@@ -9,7 +9,7 @@ theme = "mainroad"
   avatar = "img/avatar.png"
   
 [Params]
-  subtitle = "A blog." # Subtitle of your site. Used in site header
+  subtitle = "Hello I'm new here." # Subtitle of your site. Used in site header
   description = "Musings from Matt" # Site description. Used in meta description
   copyright = "Matt Bargenquast" # Footer copyright holder, otherwise will use site title
   twitter_cards = true # Enable Twitter Cards if true
