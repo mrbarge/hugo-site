@@ -16,6 +16,7 @@ there's an obvious technology bias towards the content. *And* not all of them we
 
 * *How to structure a multi-file C program* ([part 1](https://opensource.com/article/19/7/structure-multi-file-c-part-1), [part 2](https://opensource.com/article/19/7/structure-multi-file-c-part-2)) is a good introduction to starting a small C project from scratch.
 * I find [Writing Sustainable Python Scripts](https://vincent.bernat.ch/en/blog/2019-sustainable-python-script) to be a good Python equivalent that covers the essentials for a new project.
+* A fantasy baseball site is certainly not the first place I'd be looking to for programming tutorials, but somehow it's featuring one of the [best introductory write-ups on Rust](https://tht.fangraphs.com/baseball-coding-with-rust-intro/) that I've discovered (ignoring the Rust Book). Don't be disheartened by the XML parsing in part 1, it is addressed in [subsequent](https://tht.fangraphs.com/baseball-coding-with-rust-part-2/) [parts](https://tht.fangraphs.com/baseball-coding-with-rust-part-3/)..
 * [When "Zoë" !== "Zoë"](https://withblue.ink/2019/03/11/why-you-need-to-normalize-unicode-strings.html): Being Unicode-aware in your string handling.
 * [Object-oriented Programming: The Trillion Dollar Disaster](https://medium.com/better-programming/object-oriented-programming-the-trillion-dollar-disaster-92a4b666c7c7?). And if you're done with that, take a look at [Functional Programming? Don't Even Bother, It's a Silly Toy](https://medium.com/better-programming/fp-toy-7f52ea0a947e) by the same author.
 * [Comparing user Distinguished Names](https://frasertweedale.github.io/blog-redhat/posts/2019-05-28-a-dn-is-not-a-string.html) is not straightforward when there's many ways it can possibly appear. 
@@ -35,13 +36,14 @@ there's an obvious technology bias towards the content. *And* not all of them we
 * [A Business With No End](https://www.nytimes.com/interactive/2018/11/27/style/what-is-inside-this-internet-rabbit-hole.html). This tale of trying to trace the source of a spiderweb of Internet marketplace stores is just mindboggling.
 * In a similar vein of sleuthing shady Internet people is [I Accidentally Uncovered a Nationwide Scam on Airbnb](https://www.vice.com/en_au/article/43k7z3/nationwide-fake-host-scam-on-airbnb).
 
-## Security
+## Security, Reverse Engineering
 
 * I'll admit that I do admire the moxie of the students featured in [Smart like a fox: How clever students trick dumb automated programming assignment assessment systems](https://www.researchgate.net/publication/330752881_Smart_like_a_fox_How_clever_students_trick_dumb_automated_programming_assignment_assessment_systems).
 * [How Dropbox Securely Stores Your Passwords](https://blogs.dropbox.com/tech/2016/09/how-dropbox-securely-stores-your-passwords/): It's from 2016 so I don't know if it's still current, but it's still a good read and good to see a company be open about such a thing.
 * You couldn't find a greater contrast than reading about a study claiming [programmers will err towards implementing poor password security](https://www.zdnet.com/article/study-shows-programmers-will-take-the-easy-way-out-and-not-implement-proper-password-security/) unless specifically directed.
 * [Investigating a Recent eBook DRM System](https://yingtongli.me/blog/2019/03/28/drm2.html): I'm always impressed by the thought processes employed by reverse engineers and this blog is a good example.
 * ..as is [Looking Inside The Box](https://anvilventures.com/blog/looking-inside-the-box.html), which discusses reverse engineering the Dropbox client.
+* Rounding out the trinity of reverse engineering articles is [Extracting Super Mario Brothers levels with Python](http://matthewearl.github.io/2018/06/28/smb-level-extractor/), in which the author leverages a Python NES emulator and some clever coding to extract *Super Mario Brothers* level graphics.
 
 ## Arts
 
