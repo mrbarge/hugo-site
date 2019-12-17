@@ -1,6 +1,6 @@
 ---
 title: "Blogs and articles I liked in 2019"
-date: 2019-12-09T21:16:52+10:00
+date: 2019-12-17T20:16:52+10:00
 categories:
   - Things I Read
   - Year In Review
@@ -8,6 +8,7 @@ tags:
   - programming
   - culture
 draft: false
+thumbnail: "/img/20191217-t2.jpg"
 ---
 It's the end of the year, so I figured I'd kick this blog off by highlighting the excellent work of other authors' blogs, articles and long-reads which I enjoyed through the year. This is by no means a comprehensive list - I'm just going through things in my Instapaper account, which is largely just stuff I thought to archive rather than delete once I'd read it. And, 
 there's an obvious technology bias towards the content. *And* not all of them were all written in 2019 either. Nevertheless, it is presented below in a loosely categorised form.
