@@ -286,6 +286,8 @@ If we provided a different value of `name`, for instance `new-daemonset-example`
 The DaemonSet "daemonset-example" is invalid: spec.template.spec.containers[0].image: Required value
 ```
 
+You might be wondering: what happens if you're operating on an array that doesn't seem to have a patch strategy defined? The default behaviour is to *replace* the list - in essence, the same behaviour that we observe with `JSON Merge`. Therefore, it is prudent to check what patch strategy might exist before rushing into performing a strategic merge operation on a list.
+
 To fully discuss the `strategic` technique is well beyond the scope of this article. However, the best documentation I have seen on the topic is available [here](https://github.com/kubernetes/community/blob/master/contributors/devel/sig-api-machinery/strategic-merge-patch.md).
 
 ## The fine print
