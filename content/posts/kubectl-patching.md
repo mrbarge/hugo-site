@@ -201,7 +201,7 @@ spec:
 
 and we wanted to patch the `image` value for the `sidecar` container, can we do so? If we were confident that it always appeared in that position in the array, maybe, but we can't always make that assumption. The last technique we'll look at, the `Strategic Merge`, goes some way towards alleviating this issue.
 
-By the way, if you're starting to get confused about JSON Patch and JSON Merge.. well, I don't blame you! But there is a [http://erosb.github.io/post/json-patch-vs-merge-patch/](great resource) that summarizes the differences between the two. 
+By the way, if you're starting to get confused about JSON Patch and JSON Merge.. well, I don't blame you! But there is a [great resource](http://erosb.github.io/post/json-patch-vs-merge-patch/) that summarizes the differences between the two. 
 
 ### Patching strategically
 
