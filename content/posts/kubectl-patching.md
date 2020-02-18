@@ -308,6 +308,10 @@ Because YAML is a newline-oriented format, the easiest way to supply it is by wr
 kubectl patch dc/hello-world -p "$(cat mypatch.yaml)"
 ```
 
+### OpenShift/OKD and patching
+
+We've been referring to `kubectl` above, but if you're a user of [Red Hat OpenShift](https://www.openshift.com) or [OKD](https://www.okd.io), do note that the `oc` client behaves in the same manner and that all examples are cross-compatible.
+
 ### For more reading
 
 * [The official Kubernetes documentation on patching](https://kubernetes.io/docs/tasks/run-application/update-api-object-kubectl-patch/)
