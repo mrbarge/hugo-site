@@ -219,9 +219,9 @@ Look at the [documentation](https://kubernetes.io/docs/reference/generated/kuber
 
 * The `spec` sub-field is a [DaemonSetSpec](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#daemonsetspec-v1-apps), which contains a `template` struct of type [PodTemplateSpec](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#podtemplatespec-v1-core).. 
 * ..which contains a `spec` struct of type [PodSpec](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#podspec-v1-core)..
-* ..which contains a `containers` array of type [Container](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#container-v1-core), which a patch strategy of `merge` and a `merge key` of `name`.
+* ..which contains a `containers` array of type [Container](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#container-v1-core), which defines a patch strategy of `merge` and a `merge key` of `name`.
 
-The *merge key* is used as the distinguishing element between array field elements. Continuing our look at the `DaemonSet` resource, let's follow an example of patching an example:
+The *merge key* is used as the distinguishing element between array field elements. Let's look at this in practice by attempting to patch a  `DaemonSet` example:
 
 ```
 apiVersion: apps/v1
@@ -251,9 +251,9 @@ spec:
           done```
 ```
 
-The `Containers` merge key of `name` means that if we want to change the existing `daemonset-example` array entry, we must supply the `name` in our patch as the identifying key, along with the corresponding matching value. If we don't do that, our patch will be added in as a new list element instead.
+The `name` field in the `containers` array is our merge key in this instance. We must supply the `name` in our patch, alongside the value of `daemonset-example`. If we don't do that, our patch will be added in as a new array element instead of merging with the existing one.
 
-Let's patch the array entry to change the command to `bash`. Our patch will look like the following; note we have included `name` as our merge key value:
+Let's patch the array entry to change the command to `bash`. Our patch will look like the following:
 
 ```
 { "spec": 
