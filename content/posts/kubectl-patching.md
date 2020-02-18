@@ -1,5 +1,5 @@
 ---
-title: "Getting and patching JSON with kubectl"
+title: "Patching Kubernetes resources with kubectl"
 date: 2020-02-17T21:02:21+10:00
 draft: false
 categories:
@@ -8,6 +8,8 @@ tags:
   - json
   - kubernetes
   - openshift
+thumbnail: "/img/teddypatch.jpg"
+
 ---
 ## Getting Kuberenetes resources
 
