@@ -11,6 +11,8 @@ tags:
 thumbnail: "/img/teddypatch.jpg"
 
 ---
+In this blog we're going to learn how we can use `kubectl`'s `patch` command to modify the configuration of Kubernetes-managed resources via the command-line. Before we do that though, we'll go through a quick primer on how you can display Kubernetes resources so you know what it is you're patching.
+
 ## Getting Kuberenetes resources
 
 One of the first [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) commands a Kubernetes beginner will become intimately acquainted with is the [get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#get) command. It displays all manner of different resources that Kubernetes is aware of, such as pods, deployments and secrets.
@@ -43,9 +45,7 @@ There is an excellent and steadily-growing resource of creative ways to use ``ku
 
 ## Patching Kubernetes resources
 
-``kubectl`` also provides the [patch](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#patch) command, which allows for on-the-fly alterations to Kubernetes resources. What's more, it provides three different techniques for performing patches, each of which has advantages in specific situations.
-
-The default behaviour is what's known as the `strategic merge`, but before we take a look at that, let's see what else `kubectl` has to offer. 
+Now that we know how to display Kubernetes resources, let's learn how we can modify them. ``kubectl`` provides the [patch](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#patch) command for exactly this purpose. What's more, it provides three different techniques for applying patches, each of which has advantages (or disadvantages) in certain situations. Whilst you might be able to get away with its default behaviour (the "*strategic merge*") for most scenarios, being aware of the other techniques is helpful. We're going to look at those alternate methods first, and then see how the default behaviour differs.
 
 ### Patching the JSON Merge way
 
@@ -311,6 +311,10 @@ kubectl patch dc/hello-world -p "$(cat mypatch.yaml)"
 ### OpenShift/OKD and patching
 
 We've been referring to `kubectl` above, but if you're a user of [Red Hat OpenShift](https://www.openshift.com) or [OKD](https://www.okd.io), do note that the `oc` client behaves in the same manner and that all examples are cross-compatible.
+
+### Why are there so many different ways to mess with JSON data?
+
+Sorry friend, you're asking the wrong person there. 
 
 ### For more reading
 
