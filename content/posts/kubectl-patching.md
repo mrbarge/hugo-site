@@ -261,7 +261,7 @@ The `Strategic Merge` is the default behaviour of `kubectl`. That is to say, if 
 * `replace`
 * `delete`
 
-You can look up whether an array resource definition has a patch strategy defined in the [Kubernetes API Documentation]([https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#podspec-v1-core]). If there isn't one defined, the default strategy is to `replace` the array.
+You can look up whether an array resource definition has a patch strategy defined in the [Kubernetes API Documentation](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#podspec-v1-core). If there isn't one defined, the default strategy is to `replace` the array.
 
 Look at the [documentation](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.17/#daemonset-v1-apps) for the `DaemonSet` resource definition as an example. We can see that:
 
