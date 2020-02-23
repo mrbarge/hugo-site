@@ -11,33 +11,50 @@ tags:
 thumbnail: "/img/teddypatch.jpg"
 
 ---
-In this blog we're going to learn how we can use `kubectl`'s `patch` command to modify the configuration of Kubernetes-managed resources via the command-line. Before we do that though, we'll go through a quick primer on how you can display Kubernetes resources so you know what it is you're patching.
+In this blog we're going to learn how we can use `kubectl`'s `patch` command to modify the configuration of Kubernetes-managed resources via the command-line. Before we do that though, we'll go through a quick primer on how you can display Kubernetes resources so that you know what and where to patch.
 
 ## Getting Kuberenetes resources
 
 One of the first [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) commands a Kubernetes beginner will become intimately acquainted with is the [get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#get) command. It displays all manner of different resources that Kubernetes is aware of, such as pods, deployments and secrets.
 
-```
--bash-4.2$ kubectl get pods
+```bash {linenos=inline}
+# kubectl get pods
 NAME                           READY     STATUS    RESTARTS   AGE
 appuio-php-docker-ex-1-build   1/1       Running   0          11s
 ```
 
-In the example above, we can see that the default behaviour of the ``get`` command is to produce human-readable output. We can customize that behaviour with the use of the ``--output`` (or ``-o``) option to select from more parseable formats such as [yaml](https://yaml.org/), [json](https://www.json.org/), [jsonpath](https://goessner.net/articles/JsonPath/index.html) and even [golang templates](https://golang.org/pkg/text/template/). 
+In the example above, we can see that the default behaviour of the ``get`` command is to produce human-readable output. We can customize that behaviour with the use of the ``--output`` (or ``-o``) option to select from parseable formats such as [yaml](https://yaml.org/) and [json](https://www.json.org/). These formats are useful to view in order to understand how we can subsequently patch them. In the example below we are retrieving the list of Kubernetes projects, but in YAML form:
 
-The latter two in particular grant us the flexibility to hone in on the fields we want to see and how we wish to see them, making them useful for scenarios where we wish to provide the state of Kubernetes into a broader script or automation process.
-
-JSONPath is similar in concept to [jq](https://stedolan.github.io/jq/), the CLI tool that should be in every engineer's toolbelt. JSONPath has a different way of interrogating the json, but achieves the same goals. In the simple exmaple below, we're pulling back the project name for any project that happens to have a matching UID value.
-
+```bash {linenos=inline}
+# kubectl get projects -o yaml
+apiVersion: v1
+items:
+- apiVersion: project.openshift.io/v1
+  kind: Project
+  metadata:
+    name: default
+    namespace: ""
+    resourceVersion: "1205"
+  spec:
+    finalizers:
+    - kubernetes
 ```
--bash-4.2$ kubectl get projects --output jsonpath='{.items[?(@.metadata.uid=="054dda83-4e53-11ea-aed8-000c29eb7917")].metadata.name}'
+
+We can even define our own output formats via [JSONPath](https://goessner.net/articles/JsonPath/index.html) or [Golang templates](https://golang.org/pkg/text/template/). These grant us the flexibility to specify the fields we want to see and how we wish to see them, making them useful for scenarios where we wish to feed the state of Kubernetes into other scripts. This is a useful technique to have at our disposal, so let's look at JSONPath in particular.
+
+JSONPath is similar in concept to [jq](https://stedolan.github.io/jq/), a well-known CLI tool for interacting with JSON. JSONPath has a different syntax for querying the JSON, but largely achieves the same goals. In the simple exmaple below, we'll use JSONPath to pull back the project name for a project that happens to have a matching UID value. 
+
+```bash {linenos=inline}
+# kubectl get projects --output \
+#    jsonpath='{.items[?(@.metadata.uid=="054dda83-4e53-11ea-aed8-000c29eb7917")].metadata.name}'
 hello
 ```
 
 However, if you're already quite familiar with ``jq``, you can of course pipe your json output to it instead and achieve the same goal:
 
-```
- kubectl get projects --output json | jq '.items[] | select(.metadata.uid=="054dda83-4e53-11ea-aed8-000c29eb7917") | .metadata.name'
+```bash {linenos=inline}
+# kubectl get projects --output json | \
+#    jq '.items[] | select(.metadata.uid=="054dda83-4e53-11ea-aed8-000c29eb7917") | .metadata.name'
 "hello"
 ```
 
@@ -51,15 +68,11 @@ Now that we know how to display Kubernetes resources, let's learn how we can mod
 
 JSON Merge is the first technique we'll explore, and - as the name would suggest - lets you merge new JSON into existing JSON document. To illustrate this with an example, let's first create a configmap:
 
-```
--bash-4.2$ kubectl create configmap hello-config --from-literal=foo=bar --from-literal=beep=boop
+```bash {linenos=inline}
+# kubectl create configmap hello-config \
+#    --from-literal=foo=bar --from-literal=beep=boop \
+#    -o json
 configmap/hello-config created
-```
-
-And then display it:
-
-```
--bash-4.2$ kubectl get configmap hello-config -o json
 {
     "apiVersion": "v1",
     "data": {
@@ -75,9 +88,11 @@ And then display it:
 
 To use the JSON Merge technique when patching, we must provide the `--type=merge` argument, and then supply the JSON to merge in. If we want to change the value of the `foo` key, we can simply supply that portion of the JSON:
 
-```
--bash-4.2$ kubectl patch configmap hello-config --type=merge -p '{"data": {"foo": "baz"}}'
--bash-4.2$ kubectl get configmap hello-config -o json
+```bash {linenos=inline}
+# kubectl patch configmap hello-config \
+#     --type=merge -p '{"data": {"foo": "baz"}}' \
+#     -o json
+configmap/hello-config patched
 {
     "apiVersion": "v1",
     "data": {
@@ -87,12 +102,13 @@ To use the JSON Merge technique when patching, we must provide the `--type=merge
     ... output trimmed ...
 ```   
 
-Previously non-existent JSON that is supplied will just get merged straight in. The example below illustrates this by adding an additional key-value pair:
+If we supply previously non-existent JSON, it will just get merged straight in. The example below illustrates this, by adding an additional key-value pair:
 
-```
--bash-4.2$ kubectl patch configmap hello-config --type=merge -p '{"data": {"new": "yes"}}'
+```bash {linenos=inline}
+# kubectl patch configmap hello-config \
+#     --type=merge -p '{"data": {"new": "yes"}}'
+#     -o json
 configmap/hello-config patched
--bash-4.2$ kubectl get configmap hello-config -o json
 {
     "apiVersion": "v1",
     "data": {
@@ -107,21 +123,38 @@ There is a catch, however! When you use this technique on JSON arrays it will re
 
 We'll start with a `limitrange` definition for `pods`:
 
-```
-spec:
-  limits:
-  - max:
-      memory: 1Gi
-    min:
-      memory: 6Mi
-    type: Pod
+```bash {linenos=inline}
+# echo """apiVersion: v1
+# kind: LimitRange
+# metadata:
+#   creationTimestamp: 2020-02-16T11:51:35Z
+#   name: core-resource-limits
+#   namespace: myproject
+# spec:
+#   limits:
+#   - max:
+#       memory: 1Gi
+#     min:
+#       memory: 6Mi
+#     type: Pod""" | oc create -f -
+limitrange/core-resource-limits created
 ```
 
 We'll now attempt to add a new array element for `containers` with the `merge` technique:
 
-```
--bash-4.2$ kubectl patch limitrange core-resource-limits --type=merge -p '{"spec": { "limits": [ { "default" : { "memory": "200Mi"}, "defaultRequest" : { "memory": "200Mi"}, "type": "Container"}]}}' -o yaml
-
+```bash {linenos=inline}
+# kubectl patch limitrange core-resource-limits \
+#     --type=merge -p '''
+#         { "spec": 
+#             { "limits": [ 
+#                { "default" : { "memory": "200Mi"}, 
+#                  "defaultRequest" : { "memory": "200Mi"}, 
+#                  "type": "Container"}
+#                ]
+#             }
+#         }''' \
+#     -o yaml
+"core-resource-limits" patched
 spec:
   limits:
   - default:
@@ -143,20 +176,26 @@ To apply the `JSON Patch` technique, we need to:
 
 * inform `kubectl` via the `--type=json` argument.
 * specify the operation taking place (`replace`, `add`, `move`, and so on)
-* specify the path to the JSON where the patch is applied
-* specify the value to be used in the patch
+* specify the `path` to the JSON where the patch is applied
+* specify the `value` to be used in the patch
 
-```
-[
-  { "op": "add", "path": "/spec/containers/-", "value": {"name": "php-hello-world", "image": "php-hello-world-1.0" }
-]
+Here's an example below:
+
+```json {linenos=inline}
+[{ "op": "add", 
+   "path": "/spec/containers/-", 
+   "value": {
+     "name": "php-hello-world", 
+     "image": "php-hello-world-1.0" 
+   }
+}]
 ```
 
 As we've seen earlier, the `JSON Merge` technique is poor for array operations, but this is a place in which `JSON Patch` excels. Using array-like indexing, we can be surgical about where in the array an item should be patched. Let's revisit our earlier `limitrange` patching example with a `JSON Patch` approach.
 
 As you'll recall, our JSON looks like the example below.
 
-```
+```yaml {linenos=inline}
   limits:
   - max:
       memory: 1Gi
@@ -167,9 +206,18 @@ As you'll recall, our JSON looks like the example below.
 
 We wish to add a new array element. We'll do so at the end of the array, indicated using the `-` symbol.
 
-```
--bash-4.2$  kubectl patch --type=json limitrange core-resource-limits -p '[{ "op": "add", "path": "/spec/limits/-", "value": {"defaultRequest" : {"memory": "200Mi"}, "type": "Container"}}]' -o yaml
-
+```bash {linenos=inline}
+# kubectl patch --type=json \
+#     limitrange core-resource-limits -p '''
+#       [{ "op": "add", 
+#           "path": "/spec/limits/-", 
+#           "value": {
+#             "defaultRequest" : {
+#               "memory": "200Mi"
+#             }, 
+#             "type": "Container"
+#       }}]''' \
+#     -o yaml
 spec:
   limits:
   - max:
@@ -190,7 +238,7 @@ There is one weakness with JSON Patch and array operations, however. We must kno
 
 If we had a pod spec as follows:
 
-```
+```yaml {linenos=inline}
 spec:
   containers:
     - name: httpd
@@ -199,7 +247,7 @@ spec:
       image: my-sidecar-1.0
 ```
 
-and we wanted to patch the `image` value for the `sidecar` container, can we do so? If we were confident that it always appeared in that position in the array, maybe, but we can't always make that assumption. The last technique we'll look at, the `Strategic Merge`, goes some way towards alleviating this issue.
+and we wanted to patch the `image` value for the `sidecar` container, can we do so? If we were confident that it always appeared in the second position of the array, maybe, but we can't always make that assumption. The last technique we'll look at, the `Strategic Merge`, goes some way towards alleviating this issue.
 
 By the way, if you're starting to get confused about JSON Patch and JSON Merge.. well, I don't blame you! But there is a [great resource](http://erosb.github.io/post/json-patch-vs-merge-patch/) that summarizes the differences between the two. 
 
@@ -223,7 +271,7 @@ Look at the [documentation](https://kubernetes.io/docs/reference/generated/kuber
 
 The *merge key* is used as the distinguishing element between array field elements. Let's look at this in practice by attempting to patch a  `DaemonSet` example:
 
-```
+```yaml {linenos=inline}
 apiVersion: apps/v1
 kind: DaemonSet
 metadata:
@@ -251,11 +299,11 @@ spec:
           done```
 ```
 
-The `name` field in the `containers` array is our merge key in this instance. We must supply the `name` in our patch, alongside the value of `daemonset-example`. If we don't do that, our patch will be added in as a new array element instead of merging with the existing one.
+The `name` field in the `containers` array is our merge key in this instance, uniquely identifying that particular array entry. We must therefore supply the `name` in our patch, alongside the value of `daemonset-example`. If we don't do that, our patch will be added in as a new array element instead of merging with the existing one.
 
 Let's patch the array entry to change the command to `bash`. Our patch will look like the following:
 
-```
+```json {linenos=inline}
 { "spec": 
   { "template": 
     { "spec": 
@@ -269,21 +317,22 @@ Let's patch the array entry to change the command to `bash`. Our patch will look
 
 We can apply it as follows:
 
-``` 
+```bash {linenos=inline}
 kubectl patch daemonset daemonset-example -p "$(cat patch.json)" -o yaml
 ```
 
 and can subsequently observe that the command portion of the array entry has changed to:
 
-```
+```yaml {linenos=inline, linenostart=17}
         command:
         - /bin/bash
 ```
 
 If we provided a different value of `name`, for instance `new-daemonset-example`, our patch would instead try to create a second list element using our patch. In our example, this would actually fail because our patch would be missing a required field:
 
-```
-The DaemonSet "daemonset-example" is invalid: spec.template.spec.containers[0].image: Required value
+```bash
+The DaemonSet "daemonset-example" is invalid: 
+  spec.template.spec.containers[0].image: Required value
 ```
 
 You might be wondering: what happens if you're operating on an array that doesn't seem to have a patch strategy defined? The default behaviour is to *replace* the list - in essence, the same behaviour that we observe with `JSON Merge`. Therefore, it is prudent to check what patch strategy might exist before rushing into performing a strategic merge operation on a list.
@@ -304,8 +353,8 @@ In the examples above, we've supplied JSON representations of the various patche
 
 Because YAML is a newline-oriented format, the easiest way to supply it is by writing the patch to a file and then passing it to `kubectl` via a subshell:
 
-```
-kubectl patch dc/hello-world -p "$(cat mypatch.yaml)"
+```bash
+# kubectl patch dc/hello-world -p "$(cat mypatch.yaml)"
 ```
 
 ### OpenShift/OKD and patching
