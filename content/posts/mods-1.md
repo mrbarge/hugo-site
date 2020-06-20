@@ -76,6 +76,8 @@ So, I churned out numerous songs using this sample. Prepare your ears for one su
 
 _I had a friend who visibly grimaced when I played this song to him for the first time, such is its power_
 
+## The mission
+
 Twenty five years later, I began to think. This sample was so good and so influential upon me at the time - was I alone in using it in so many of my own works? Was there a trove of other music out there using the same sample? Was "_Point of Departure_" even the first song to use it? And where the heck did this sample even come from in the first place?
 
 Those questions are what I set about trying to find out. The answers, such as they are, will be found in coming entries.
