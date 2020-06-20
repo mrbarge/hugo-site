@@ -24,6 +24,8 @@ Loaded on the CD was a bundle of `.MOD` music files, as well as a player that wo
 
 {{< youtube thnXzUFJnfQ >}}
 
+_This song is perfect and I won't hear another word about it_
+
 As a kid who'd only been exposed to PC Speaker warbles and MIDI music from my Sound Blaster Pro, hearing these files was a revelation. It *did* sound like CD quality, in file-sizes that were barely even 100KB in size. What sorcery was this! Without any way to learn more about the files, I simply indulged in being a happy listener and let them be the soundtrack of my schooling life for the next four weeks.
 
 ## Alexa, what's a Purple Motion?
@@ -32,11 +34,11 @@ The next month, my Dad came home again with the next issue of the same magazine,
 
 There was some more `.MOD` files, but also, some odd `.S3Ms` as well. There was "_Aquaphobia_", by some one/thing named "_Purple Motion_". And "_Catch That Goblin!_" by.. "_Skaven_"? Who both had something to do with something called the "_Future Crew_"..? All these names and terms I had no idea about, but they sounded pretty awesome! And buried elsewhere on the CD was a zipfile named `ST3.ZIP` which - and if you're down with your tracker history, you can probably guess - was the tracker authoring program [*ScreamTracker III*](https://archive.org/details/msdos_scrmt321_shareware).
 
-
-
 This let you play, edit and create `MOD` and `S3M` files. With barely a `README` to nudge me along, I eventually managed to bumble my way through it enough to learn how tracker files were put together, and eventually wrote my first song. Then another. And another. 
 
 {{< youtube S03l3ZnGtx8 >}}
+
+_"Catch that Goblin!" by Skaven showed that tracker music could easily straddle genres, in the right hands_
 
 Without a library of sound samples to work with, I started most of my creations by exporting the samples from existing files, and then loading them into my own mods. For example, if one song had a particularly awesome bass-kick sound that I wanted to use? Well, just save that sucker to disk and then load it up in a new song. This was a pretty common practice with mod music, but the general rule of thumb with doing this was - much like writing a high-school essay - make sure to credit your sources. 
 
@@ -57,6 +59,8 @@ _The "Five Musicians" website circa 1997 - please remember to use Netscape 2.0_
 Even to this day I still reckon it's a pretty awesome conceit. _Five Musicians_ was an occasionally-rotating roster of five tracker composers who were particularly skilled at writing music, and who released most of their output under that group's moniker. One such artist was [Necros](https://modarchive.org/index.php?request=view_artist_modules&query=69271), real name [Andrew Sega](https://en.wikipedia.org/wiki/Andrew_Sega).. and even if you don't think you know Necros, if you were a PC gamer in the late 90s, you'll be familiar with his work - one of his tracks, _Isotoxin_, appears [memorably](https://www.youtube.com/watch?v=n7sh6jAOzFU) in the game _Unreal_, whilst _Mechanism 8_ was featured in the semi-sequel _Unreal Tournament_.
 
 {{< youtube r6lxMiZOFVA >}}
+
+_This song is still on my gym playlist_
 
 Necros has a catalog of tracker music so good, it's hard to really single out just one specific stand-out track. But "_Point of Departure_" (featured above) from his music-disk "_Progression_", really became an immediate favourite of mine. And it featured one of the most awesome drumloop samples I'd ever heard, aka `BRBEATLP.958` (the sample's filename in the `S3M`'s metadata):
 
