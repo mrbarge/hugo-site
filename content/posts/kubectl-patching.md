@@ -8,6 +8,8 @@ tags:
   - json
   - kubernetes
   - openshift
+images:
+  - https://bargenqua.st/img/teddypatch.jpg
 thumbnail: "/img/teddypatch.jpg"
 
 ---

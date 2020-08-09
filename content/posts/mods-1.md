@@ -6,6 +6,8 @@ categories:
   - Coding
 tags:
   - retro
+images:
+  - https://bargenqua.st/img/st3.png
 thumbnail: "/img/st3.png"
 ---
 ## Preamble

@@ -8,6 +8,8 @@ tags:
   - shell scripting
   - bash
   - linux
+images:
+  - https://bargenqua.st/img/bashpipe.png
 thumbnail: "/img/bashpipe.png"
 ---
 

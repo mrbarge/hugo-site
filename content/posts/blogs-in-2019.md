@@ -8,6 +8,8 @@ tags:
   - programming
   - culture
 draft: false
+images:
+  - https://bargenqua.st/img/20191217-t2.jpg
 thumbnail: "/img/20191217-t2.jpg"
 ---
 It's the end of the year, so I figured I'd kick this blog off by highlighting the excellent work of other authors' blogs, articles and long-reads which I enjoyed through the year. This is by no means a comprehensive list - I'm just going through things in my Instapaper account, which is largely just stuff I thought to archive rather than delete once I'd read it. And, 
