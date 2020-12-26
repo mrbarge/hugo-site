@@ -13,7 +13,7 @@ images:
   - https://bargenqua.st/img/aoc-2020.jpg
 ---
 
-[Advent of Code](https://adventofcode.com) has wrapped for another year, so I figured I’d write a companion piece to [last year’s blog](../posts/aoc-2019-wrapup) about the same topic with some brief thoughts and reflections on 2020’s event.
+[Advent of Code](https://adventofcode.com) has wrapped for another year, so I figured I’d write a companion piece to [last year’s blog](../aoc-2019-wrapup) about the same topic with some brief thoughts and reflections on 2020’s event.
 
 ## Overall feelings
 
