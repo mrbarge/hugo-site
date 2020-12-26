@@ -33,7 +33,7 @@ Of course, depending on your implementation langauge of choice, some of these ma
 
 ## Recommended days
 
-This year it felt like there were many days that required or benefited from a solution that embraced [recursion](https://en.wikipedia.org/wiki/Recursion_(computer_science)). Recursive programming is typically not something I’m do much of in my day-to-day job, so it was fun to exercise that part of my brain again and think about how to do that effectively.
+This year it felt like there were many days that required or benefited from a solution that embraced [recursion](https://en.wikipedia.org/wiki/Recursion_(computer_science)). Recursive programming is typically not something I do much of in my day-to-day job, so it was fun to exercise that part of my brain again and think about how to do that effectively.
 
 In terms of memorable or recommended days for those getting started with AoC:
 - [Day 3](https://adventofcode.com/2020/day/3) is a good warm-up for some of the later days where more advanced 2D (or 3D, or 4D!) grid traversal is required.
