@@ -15,6 +15,9 @@ images:
 
 Obsessed with the muffled, 8KHz mono perfection of a drum-loop used in an old ScreamTracker III module, I aim to seek out how many other modules may have used the same sample.. but not before some hard nostalgia-blast reminiscing over the tracking subculture as a whole.
 
+- [Part one](../mods-1)
+- [Part two](../mods-2)
+
 ## Forming the battle plan
 
 First thing's first: if I was to figure out how many other songs might've used `BRBEATLP.958` in them, I needed to get my hands on as many tracker songs as I possibly could.
