@@ -102,6 +102,8 @@ As we've seen, the tracker scene has been defined by the passion and talent of s
 
 In the next part of this series, we get down to the business of fingerprinting the samples of every tracker file in existence - but not before learning what the heck a "parapointer" is through the aid of old 90s text files.
 
+- On to [Part Three](../mods-3)
+
 ## Resources
 
 Credit goes to the following resources which helped me learn or remember some of this history:

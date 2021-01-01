@@ -103,3 +103,4 @@ Did all this result in any amazing insights? How many times was `BRBEATLP.958` u
 
 Well.. I guess that'll all be a tale for the next (and final) blog! Until then - thanks for sticking around.
 
+- On to [Part Four](../mods-4)
