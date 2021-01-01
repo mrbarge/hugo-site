@@ -1,5 +1,5 @@
 ---
-title: "To BRBEATLP.958 and beyond (part 4): "
+title: "To BRBEATLP.958 and beyond (part 4): A mystery solved"
 date: 2021-01-01T10:22:00+10:00
 draft: false
 categories:
