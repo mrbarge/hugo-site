@@ -11,6 +11,7 @@ tags:
 thumbnail: "/img/s2i-python-setuptools.png"
 images:
   - https://bargenqua.st/img/s2i-python-setuptools.png
+toc: false
 ---
 
 After a recent commit to a Python project that I work on, I noticed that my resulting OpenShift pod had begun crashlooping after the rebuild.
