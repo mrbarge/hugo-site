@@ -31,7 +31,7 @@ However, if we look at this from the angle of:
 
 _“I’m a Kubernetes administrator, do I need to know the material this certification assesses?”_
 
-then I would say yes, with an asterisk attached. Many topics in the curriculum (API server, RBAC, Pod security contexts, Audit) are ones that I feel every Kubernetes administrator should have a good working grasp of. Others, such as image vulnerability scanning or user workload static analysis, are ones that I’d argue are somewhat less important,  if only because there are a growing number of third-party providers that are doing a great job of that. 
+then I would say yes, with an asterisk attached. Many topics in the curriculum (API server, RBAC, Pod security contexts, Audit) are ones that I feel every Kubernetes administrator should have a good working grasp of. Others, such as image vulnerability scanning or user workload static analysis, are ones that I’d argue are somewhat less important, if only because there are a growing number of third-party tools and providers that are doing a great job of that, and I suspect it's going to be a rapidly changing landscape. That said, it's all still very relevant knowledge to possess.
 
 ## Is it harder than CKA?
 
