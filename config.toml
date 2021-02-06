@@ -2,6 +2,7 @@ baseURL = "https://bargenqua.st/"
 languageCode = "en-us"
 title = "Matt Bargenquast"
 theme = "mainroad"
+disqusShortname = "mbarg"
 
 [Author] # Used in authorbox
   name = "Matt Bargenquast"

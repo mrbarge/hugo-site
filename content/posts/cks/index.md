@@ -11,6 +11,7 @@ thumbnail: "/img/cksthumb.png"
 images:
   - https://bargenqua.st/img/cksthumb.png
 toc: false
+comments: true
 ---
 
 Having just passed the exam myself, I wanted to do a write-up whilst many of these thoughts are fresh in my mind. Disclaimer: opinions are my own, not my employer's, etc.
@@ -58,6 +59,8 @@ I'll also note that Kim Wuestkamp, the author of the killer.sh course, is produc
 * The usual exam tips apply. Get a good sleep first. Resist the urge to stress and last-minute-cram unless that’s just Your Thing. Have a bottle of water with you. Don’t do what I did and schedule it for 9pm on a Monday night.
 
 * Prepare your exam environment ahead of time. I’ve done many remote-proctored exams, but the CKS one was particularly strict about ensuring my environment was clear of clutter. This is definitely the first time I’ve needed to completely remove my audio speakers from my desk and cover a second monitor with a towel! Not really things you want to be improvising moments before an exam.
+
+* Learn and practice how to [troubleshoot](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-cluster/) the API server. Many topics in the CKS will require you to configure the Kubernetes API server in some way. In case you get those parts wrong, your API server is just going to not start up at all. Go and put a bad argument into your `/etc/kubernetes/manifests/kube-apiserver.yaml` file, then try and see how you'd identify that in logs.
 
 * Pick the high-ranking questions to do first. Each question will have a % weight attached in regards to how much it contributes to your overall score. As I mentioned, time is of the essence in this exam - skim through all the questions at the start of the exam and attack the heaviest-weighted ones first. (also note that the heaviest-weighted ones are not necessarily always going to be the hardest!)
 
