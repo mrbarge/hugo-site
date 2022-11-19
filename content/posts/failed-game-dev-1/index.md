@@ -6,15 +6,10 @@ categories:
   - Coding
 tags:
   - retro
-thumbnail: "/img/mods2thumb.png"
-resources:
-- name: header
-  src: images/soundtracker.png
-- name: usenet
-  src: mods-2/mods2usenet.png
+thumbnail: "/img/game-dev-logo-1.png"
 images:
-  - https://bargenqua.st/img/mods2thumb.png
-image: https://bargenqua.st/img/aoc-2019.png
+  - https://bargenqua.st/img/game-dev-logo-1.png
+image: https://bargenqua.st/img/game-dev-logo-1.png
 
 ---
 
