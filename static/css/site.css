@@ -19,3 +19,9 @@ img[src$='#floatright']
 figcaption {
     text-align: center;
 }
+
+.video-shortcode {
+    max-width: 100%;
+    height: auto;
+}
+  
