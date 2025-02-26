@@ -86,31 +86,13 @@ It wasn't all lost dreams and skipped opportunites, mind you. Oh no. I did make 
 
 ## The Grod saga
 
-{{< figure src="images/grod3-10.jpg" link="images/grod3-10.jpg" caption="It seemed so funny at the time." >}}
+My first three games were all terrible text adventures based upon a pre-existing Commodore 64 game named [Grod the Demented Pixie](https://www.youtube.com/watch?v=RygiuANd50o). Actually, calling them _text adventures_ might be a stretch.. they all largely involved a series of picking random action choices (A, B or C), one of which was going to be the correct answer, with the other two leading to **GAME OVER**. No clues were given as to the correct answer, and most of the time it was just things that a 14-year-old would find cool or funny. As in the following examples taken from **Grod 3**:
 
-My first three games were all terrible text adventures based upon a pre-existing Commodore 64 game named [Grod the Demented Pixie](https://www.youtube.com/watch?v=RygiuANd50o). Actually, calling them _text adventures_ might be a stretch.. they all largely involved a series of picking random action choices (A, B or C), one of which was going to be the correct answer, with the other two leading to **GAME OVER**. No clues were given as to the correct answer, and most of the time it was just things that a 14-year-old would find cool or funny. As in the following example taken from **Grod 3**:
+{{< carousel name="grod3-carousel" items="1" height="500" unit="px" duration="7000" >}}
 
-```
-YOU DECIDE TO GO TO LAS VEGAS. YOU WALK TO THE AIRPORT
-WITHOUT A HASSLE. THEN YOU ARE FLYING. WHILE ON THE PLANE,
-THE STEWARDESS WALKS UP TO YOU AND TRIES TO CHAT YOU UP.
+Take note of that `I came up with everything else in all the Grod games` bit in one of the screenshots.. we'll be returning to that shortly.
 
-WILL YOU GO TO THE LUGAGGE COMPARTMENT WITH HER OR STAY?
-(A) GO OR (B) STAY: A
-
-YOU GO TO THE COMPARTMENT AT THE BACK AND START TO
-PASH EACHOTHER. YOU START TO GET REALLY EXCITED BUT THEN
-SHE TRANSFORMS INTO OPRAH WINFREY AND MAKES A
-SPECIAL ON YOU ON HER SHOW. THE TOPIC WAS
-`MEN WHO RAPE FLIGHT ATTENDANTS. YOU ARE LAUGHED AT FOR
-THE REST OF YOUR LIFE! HA HA! WHAT A LOSER! HA HA HA!
-
-GAME OVER.
-```
-
-_Ha ha ha_ indeed! Sexual trauma certainly adds levity to any videogame!
-
-At the time I was pretty proud of my creations. But one fateful day, Tony - operating under his "company" persona of  **BISHTRONICS** - gave me a disk containing a solitary file. I inserted it and inspected the contents. It was that moment that the world changed.
+At the time I was pretty proud of my creations, crude as they were. But one fateful day at school, Tony - my good friend and coding rival from [part one](../failed-game-dev-1/), operating under his "company" persona of  **BISHTRONICS** - gave me a disk containing a solitary file. When I got home, I inserted the disk and inspected the contents. It was that moment that the world changed.
 
 ```
 C:\> DIR A:\
@@ -120,21 +102,21 @@ Volume in drive A is QBASIC
 
  Directory of A:\
 
-GROD4    BAS       4345  10-15-94  12:34p
+GROD4    BAS       49,345  10-15-94  12:34p
 
-        1 file(s)     4,345 bytes
-        1 dir(s)      1,310,720 bytes free
+        1 file(s)     49,345 bytes
+        1 dir(s)      1,280,720 bytes free
 ```
 
 **GROD4.BAS**...
 
 Tony had gone and written an unofficial sequel to my precious babies.
 
-I loaded it up, and my jaw dropped. It featured something the other Grod games didn't.. actual graphics and sound!
+I loaded it up, and my jaw dropped. It featured something the other Grod games didn't.. actual animated graphics and sound!
 
-{{< figure src="images/grod4-10.jpg" link="images/grod4-10.jpg" caption="At the time, this was the most amazing thing I'd ever seen. Yes, even more amazing than _Robocop_." >}}
+{{< carousel name="grod4-carousel" items="1" height="500" unit="px" duration="7000" >}}
 
-My mind was blown. I _should_ have been flattered. In hindsight, I absolutely am. But this was _such_ a step up from my own dismal creations that, in the moment, I couldn't see it as anything but a reinforcement of my perceived lack of technical prowess.
+At the time, this was the most amazing thing I'd ever seen. Yes, even more amazing than _Robocop_. My mind was blown. I _should_ have been flattered. In hindsight, I absolutely am. But this was _such_ a step up from my own dismal creations that, in the moment, I couldn't see it as anything but a reinforcement of my perceived lack of technical prowess.
 
 I stewed over it before landing upon my response - to spend the next few weeks tirelessly writing what I hoped would be the ultimate Grod game, **Grod 5**. A returned volley; one that would be game-set-match **BARGOSOFT**.
 
@@ -195,3 +177,4 @@ The end.
 
 ## Epilogue of the epilogue
 
+ 
