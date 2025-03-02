@@ -62,7 +62,7 @@ the game!! And you could chose which person to talk to as
 well. No music - that would spoil the atmosphere. Cool.
 ```
 
-Sure, it seemed like a good idea at the time, but as any _Call of Duty_ player can attest, the only thing microphones have brought to gaming is the ability for anonymous twelve-year-olds to hurl endless obscenities in your face.
+Sure, it seemed like a good idea at the time, but as any _Call of Duty_ player can attest, the only thing microphones have brought to gaming is the ability for anonymous twelve-year-olds to call me a variety of slurs I simply can't repeat here.
 
 Just like the Hindenburg, so too did the plans for "SWAT" begin to slowly crash and burn, with my interest waning and the diary transforming into an often-cringeworthy fest of teenage angst.
 
@@ -128,9 +128,9 @@ DRAW "BL200 bd100 r50 u60 r300 l250 g50 e50 r250 u20 ....."
 
 that draw each line pixel by pixel. I couldn't even tell you what the above does anymore, but I vividly recall the endless repetition of tweaking `DRAW` statements, running code to see if it looked alright (it wouldn't), rinse and repeat. But hell, it was a sacrifice worth making: my reputation - **BARGOSOFT'S** reputation - was on the line here, so if it meant nights of sitting there manually creating terribly simple graphics line-by-line, then so be it.
 
-Suffice to say, Grod 5, like all the other games, pretty much sucked. Although it featured such gameplay additions as secret rooms (_during "A,B,C" prompts, you needed to type a phrase that no-one in their right mind would type without looking at the code itself_), and non-linear progression (_you can go via the left door.... or the right door..!_), it was still the same crusty old Grod underneath.
+Suffice to say, Grod 5, like all the other games, pretty much sucked. Although it featured such gameplay additions as secret rooms (_during "A,B,C" prompts, you needed to type a phrase that no-one in their right mind would type without looking at the code itself_), and non-linear progression (_you can go via the left door.... or the right door..!_), it was still the same crusty old Grod underneath. So bad, in fact, that when replaying it for this blog and dying for the umpteenth time, I gave up on trying to beat it at all.
 
-{{< figure src="images/grod5-10.jpg" link="images/grod5-10.jpg" caption="It's all about the gameplay, not the graphics.. right..? RIGHT?" >}}
+{{< carousel name="grod5-carousel" items="1" height="500" unit="px" duration="7000" >}}
 
 As 1994 began to draw to a close so too did my three-year career in QBasic programming, taking with it my desire and patience to write these terrible games. And so, during the warm summer months, I authored my last hurrah: _Snake Stone : Death of a Galaxy_.
 
@@ -140,18 +140,17 @@ Spanning around 2500 lines of code split into three separate files, _Snake Stone
 
 And yeah, it still pretty much sucked.
 
-{{< figure src="images/snake1-1.png" link="images/snake1-1.png" >}}
-{{< figure src="images/snake1-2.png" link="images/snake1-1.png" >}}
-{{< figure src="images/snake1-4.png" link="images/snake1-1.png" caption="Snake Stone in action">}}
+{{< carousel name="snake1-carousel" items="1" height="500" unit="px" duration="7000" >}}
 
-There was a _Snake Stone 2_ planned, but I only managed to write the introduction sequence and the first "A, B, C" question. I think once I got to that point, I realized that it was about time I invested my efforts in something other than giving a piece of crap a new coat of paint.. like, playing _Duke Nukem 3D_ for instance. 
+There was also a _Snake Stone 2_ planned, but I only managed to write the introduction sequence and the first "A, B, C" question:
+
+{{< carousel name="snake2-carousel" items="1" height="500" unit="px" duration="7000" >}}
+
+I think once I got to that point, I realized that it was about time I invested my efforts in something other than giving a piece of crap a new coat of paint.. like, playing _Duke Nukem 3D_ for instance. 
 
 Yeah. 
 
 That'd do just fine.
-
-{{< figure src="images/snake2-1.png" link="images/snake2-1.png" caption="I remain very proud of this cinematic shot of an anonymous man holding a cigarette over an ash tray." >}}
-{{< figure src="images/snake2-2.png" link="images/snake2-2.png" caption="One day I shall auction off the code to Snake Stone 2 and make millions." >}}
 
 And on that note, this two-part epic on 90s teenage nerddom draws to a close.
 
@@ -175,6 +174,12 @@ Why hello there, palms! Please meet my face. Repeatedly.
 
 The end.
 
-## Epilogue of the epilogue
+## Epilogue of the epilogue, and a tease of what's to come
 
- 
+As I tidy up this blog for republishing on my personal site, almost thirty years have passed since those wild QBasic days. That in itself seems unfathomable.
+
+I do, however, continue to see echoes of the silliness myself and Tony got up to in the modern day. There's an endless flood of indie trash uploaded to Steam every month written by teenagers who figured out how to do something creative with their PC, stuffed it full of inside jokes, and decided to upload it for shits'n'giggles. So it'd seem some things will never change.
+
+Republishing this blog has been worth it for at least one reason beyond simply huddling under comfortable blanket of nostalgia. Tony, whom I'd fallen out of contact with since high school ended, somehow stumbled upon Part 1 of this blog a couple of years ago and reached out. He took it all in good humour, and hopefully he'll do so with this one as well. So that's cool!
+
+I'm also pleased to note that **Grod's** adventures didn't end in 1995 after all. What exactly does that mean? I guess you'll have to wait until the next part to find out.. and hopefully not quite as long.
