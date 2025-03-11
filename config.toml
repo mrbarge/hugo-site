@@ -37,4 +37,7 @@ disqusShortname = "mbarg"
   twitter = "MattBargenquast"
   github = "mrbarge"
   email = "matt@bargenqua.st"  
-  
+
+[services]
+  [services.disqus]
+    shortname = 'mbarg'  
