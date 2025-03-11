@@ -144,3 +144,5 @@ The next three demos in the Imphobia series weren't much better, just featuring 
 ## In the next part..
 
 Bargosoft Game Studios is founded, but Bishtronics deals it an early crippling blow. Meanwhile, a third competitor - as-yet-unknown to both - arrives to disrupt the local gamedev scene.
+
+{{<disqus>}}

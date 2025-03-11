@@ -67,3 +67,4 @@ Well, it.. sort-of did it. Which, to its credit, is genuinely kind of awesome.
 
 Ultimately, it's been genuinely entertaining and fascinating to see how an LLM performed here. The actual content it produced, however, still reeks with the same AI stench that most LLM-produced material does. None of the game content really surprised me.. and I guess that's to be expected, because it's essentially doing predictive text. It's hard to be surprised when it's engineered to write the least surprising things.
 
+{{<disqus>}}

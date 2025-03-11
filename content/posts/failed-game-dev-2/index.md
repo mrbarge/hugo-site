@@ -183,3 +183,5 @@ I do, however, continue to see echoes of the silliness myself and Tony got up to
 Republishing this blog has been worth it for at least one reason beyond simply huddling under comfortable blanket of nostalgia. Tony, whom I'd fallen out of contact with since high school ended, somehow stumbled upon Part 1 of this blog a couple of years ago and reached out. He took it all in good humour, and hopefully he'll do so with this one as well. So that's cool!
 
 I'm also pleased to note that **Grod's** adventures didn't end in 1995 after all. What exactly does that mean? I guess you'll have to wait until the next part to find out.. and hopefully not quite as long.
+
+{{<disqus>}}
