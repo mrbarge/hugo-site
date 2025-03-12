@@ -22,7 +22,7 @@ In searching around for a good image carousel implementations suitable for Hugo 
 
 The [site's](https://hugocodex.org/add-ons/slider-carousel/) implementation had a hard dependency on a carousel yaml file named `carousel.yaml`, which is where all the carousel images are defined. I wanted to be able to have a Hugo shortcode that let me define the name of the carousel as a parameter, and then look up a yaml file named accordingly.
 
-So if you've arrived here via searching for a similar thing, read on! Here's what I did.
+So if you've arrived here via searching for a similar thing, read on! Here's what I did. I will note, though - I'm by no means going to claim that I'm proficient at Hugo and landed on this solution with the partial help of LLMs, so, if you're aware of a better way.. please do mention so in the comments!
 
 My main change was to modify the `layouts/shortcodes/carousel.html` file to be this, instead:
 
